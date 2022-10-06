@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">PaciFinder</string>
     <string name="start_searching">Start searching</string>
+    <string name="_36_6">36.6°</string>
+    <string name="regular">Regular</string>
+    <string name="none">None</string>
 </resources>
