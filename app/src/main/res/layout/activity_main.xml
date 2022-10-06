@@ -9,36 +9,35 @@
 
     <ImageButton
         android:id="@+id/findButton"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_width="340dp"
+        android:layout_height="340dp"
         android:backgroundTint="#00FFFFFF"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.382"
+        app:layout_constraintVertical_bias="0.217"
         app:srcCompat="@drawable/find_button"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
-        android:id="@+id/breathButton"
+        android:id="@+id/btButton"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginStart="266dp"
+        android:layout_marginStart="26dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="26dp"
-        android:layout_marginBottom="177dp"
+        android:layout_marginBottom="153dp"
         android:backgroundTint="#00FFFFFF"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintEnd_toStartOf="@+id/dangerButton"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/findButton"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/breath_button"
+        app:layout_constraintVertical_bias="0.462"
+        app:srcCompat="@drawable/bt_button"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
@@ -54,21 +53,44 @@
         app:layout_constraintEnd_toStartOf="@+id/breathButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/findButton"
-        app:srcCompat="@drawable/danger_button" />
+        app:layout_constraintVertical_bias="0.462"
+        app:srcCompat="@drawable/danger_button"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
-        android:id="@+id/btButton"
+        android:id="@+id/breathButton"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginStart="26dp"
+        android:layout_marginStart="266dp"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="27dp"
         android:layout_marginBottom="153dp"
         android:backgroundTint="#00FFFFFF"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/dangerButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/findButton"
-        app:srcCompat="@drawable/bt_button" />
+        app:layout_constraintVertical_bias="0.462"
+        app:srcCompat="@drawable/breath_button"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/findText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginEnd="158dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/start_searching"
+        android:textSize="24sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/dangerButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/findButton"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
