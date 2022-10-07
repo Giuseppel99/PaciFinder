@@ -2,135 +2,201 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="410dp"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    tools:actionBarNavMode="standard"
     tools:context=".MainActivity">
 
-    <ImageButton
-        android:id="@+id/findButton"
-        android:layout_width="340dp"
-        android:layout_height="340dp"
-        android:backgroundTint="#00FFFFFF"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.217"
-        app:srcCompat="@drawable/find_button"
-        tools:ignore="SpeakableTextPresentCheck" />
+ <!-- AppBar layout for using Toolbar as AppBar -->
+ <com.google.android.material.appbar.AppBarLayout
+     android:id="@+id/appBarLayout"
+     android:layout_width="0dp"
+     android:layout_height="wrap_content"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent">
 
-    <ImageButton
-        android:id="@+id/btButton"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="153dp"
-        android:backgroundTint="#00FFFFFF"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/dangerButton"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/findButton"
-        app:layout_constraintVertical_bias="0.462"
-        app:srcCompat="@drawable/bt_button"
-        tools:ignore="SpeakableTextPresentCheck" />
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
 
-    <ImageButton
-        android:id="@+id/dangerButton"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="146dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="153dp"
-        android:backgroundTint="#00FFFFFF"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/breathButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/findButton"
-        app:layout_constraintVertical_bias="0.462"
-        app:srcCompat="@drawable/danger_button"
-        tools:ignore="SpeakableTextPresentCheck" />
+   <!-- ToolBar widget -->
+   <androidx.appcompat.widget.Toolbar
+       android:id="@+id/toolbar"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@color/blue"
+       android:minHeight="?attr/actionBarSize"
+       android:theme="?attr/actionBarTheme"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:title="PaciFinder"
+       app:titleTextColor="#ffff" />
 
-    <ImageButton
-        android:id="@+id/breathButton"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="266dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginBottom="153dp"
-        android:backgroundTint="#00FFFFFF"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/findButton"
-        app:layout_constraintVertical_bias="0.462"
-        app:srcCompat="@drawable/breath_button"
-        tools:ignore="SpeakableTextPresentCheck" />
+   <ImageButton
+       android:id="@+id/settingButton"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginEnd="16dp"
+       android:backgroundTint="#00FFFFFF"
+       android:minHeight="48dp"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="@+id/toolbar"
+       app:layout_constraintTop_toTopOf="parent"
+       app:srcCompat="@drawable/ic_baseline_settings_24"
+       tools:ignore="SpeakableTextPresentCheck" />
 
-    <TextView
-        android:id="@+id/findText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="158dp"
-        android:layout_marginEnd="158dp"
-        android:layout_marginBottom="5dp"
-        android:text="@string/start_searching"
-        android:textSize="24sp"
-        app:autoSizeTextType="uniform"
-        app:layout_constraintBottom_toTopOf="@+id/dangerButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/findButton"
-        app:layout_constraintVertical_bias="0.0" />
+   <ImageButton
+       android:id="@+id/profileButton"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:backgroundTint="#00FFFFFF"
+       android:minHeight="48dp"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toStartOf="@+id/settingButton"
+       app:layout_constraintTop_toTopOf="parent"
+       app:srcCompat="@drawable/ic_baseline_child_care_24"
+       tools:ignore="SpeakableTextPresentCheck" />
 
-    <TextView
-        android:id="@+id/btText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="61dp"
-        android:layout_marginEnd="303dp"
-        android:layout_marginBottom="198dp"
-        android:text="@string/_36_6"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btButton" />
+   <!-- Right most TextView -->
 
-    <TextView
-        android:id="@+id/dangerText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="73dp"
-        android:layout_marginBottom="198dp"
-        android:text="@string/none"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btText"
-        app:layout_constraintTop_toBottomOf="@+id/dangerButton" />
+   <!-- Right most ImageView -->
 
-    <TextView
-        android:id="@+id/breathText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="65dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="198dp"
-        android:text="@string/regular"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/dangerText"
-        app:layout_constraintTop_toBottomOf="@+id/breathButton" />
+   <!-- ImageView beside title of ToolBar -->
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+ </com.google.android.material.appbar.AppBarLayout>
+
+ <ImageButton
+     android:id="@+id/findButton"
+     android:layout_width="340dp"
+     android:layout_height="340dp"
+     android:backgroundTint="#00FFFFFF"
+     android:scaleType="fitCenter"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintHorizontal_bias="0.492"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     app:layout_constraintVertical_bias="0.217"
+     app:srcCompat="@drawable/find_button"
+     tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+ <ImageButton
+     android:id="@+id/btButton"
+     android:layout_width="120dp"
+     android:layout_height="120dp"
+     android:layout_marginStart="26dp"
+     android:layout_marginTop="24dp"
+     android:layout_marginBottom="153dp"
+     android:backgroundTint="#00FFFFFF"
+     android:scaleType="fitCenter"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toStartOf="@+id/dangerButton"
+     app:layout_constraintHorizontal_bias="0.0"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/findButton"
+     app:layout_constraintVertical_bias="0.462"
+     app:srcCompat="@drawable/bt_button"
+     tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+ <ImageButton
+     android:id="@+id/dangerButton"
+     android:layout_width="120dp"
+     android:layout_height="120dp"
+     android:layout_marginStart="146dp"
+     android:layout_marginTop="24dp"
+     android:layout_marginBottom="153dp"
+     android:backgroundTint="#00FFFFFF"
+     android:scaleType="fitCenter"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toStartOf="@+id/breathButton"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/findButton"
+     app:layout_constraintVertical_bias="0.462"
+     app:srcCompat="@drawable/danger_button"
+     tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+ <ImageButton
+     android:id="@+id/breathButton"
+     android:layout_width="120dp"
+     android:layout_height="120dp"
+     android:layout_marginStart="266dp"
+     android:layout_marginTop="24dp"
+     android:layout_marginEnd="27dp"
+     android:layout_marginBottom="153dp"
+     android:backgroundTint="#00FFFFFF"
+     android:scaleType="fitCenter"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintHorizontal_bias="0.0"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/findButton"
+     app:layout_constraintVertical_bias="0.462"
+     app:srcCompat="@drawable/breath_button"
+     tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+ <TextView
+     android:id="@+id/findText"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="158dp"
+     android:layout_marginEnd="158dp"
+     android:text="@string/start_searching"
+     android:textSize="24sp"
+     app:autoSizeTextType="uniform"
+     app:layout_constraintBottom_toTopOf="@+id/dangerButton"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintHorizontal_bias="0.507"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/findButton"
+     app:layout_constraintVertical_bias="0.0" />
+
+ <TextView
+     android:id="@+id/btText"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="61dp"
+     android:layout_marginEnd="303dp"
+     android:layout_marginBottom="131dp"
+     android:text="@string/_36_6"
+     android:textSize="20sp"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/btButton" />
+
+ <TextView
+     android:id="@+id/dangerText"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="74dp"
+     android:layout_marginEnd="181dp"
+     android:layout_marginBottom="131dp"
+     android:text="@string/none"
+     android:textSize="20sp"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toEndOf="@+id/btText"
+     app:layout_constraintTop_toBottomOf="@+id/dangerButton" />
+
+ <TextView
+     android:id="@+id/breathText"
+     android:layout_width="69dp"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="66dp"
+     android:layout_marginEnd="46dp"
+     android:layout_marginBottom="131dp"
+     android:text="@string/regular"
+     android:textSize="20sp"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toEndOf="@+id/dangerText"
+     app:layout_constraintTop_toBottomOf="@+id/breathButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
